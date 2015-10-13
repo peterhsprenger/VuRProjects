@@ -1,0 +1,6 @@
+import pdfminer
+
+pdfFile = 'C:/Users/PeterH/eclipse/vurpy/A-Drei_Ecksteine_aus_Steinen_des_Anstosses.pdf'
+pdfParsed = pdfminer.pdfparser(pdfFile)
+
+print pdfParsed

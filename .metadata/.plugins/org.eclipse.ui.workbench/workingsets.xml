@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1441729953493_1" label="VuRProjects" name="VuRProjects">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RemoteSystemsTempFiles" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DNB" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/PDF" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1441730750165_2" label="XX_Training Resources" name="XX_Training Resources">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TrainingResources" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1441729732471_0" label="Window Working Set" name="Aggregate for window 1433379822775"/>
+<mruList name="XX_Training Resources"/>
+<mruList name="VuRProjects"/>
+</workingSetManager>

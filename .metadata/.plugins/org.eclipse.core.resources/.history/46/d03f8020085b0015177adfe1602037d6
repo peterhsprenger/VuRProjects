@@ -1,0 +1,7 @@
+import csv
+
+CSVFile = 'vlb-unipress.csv'
+myCSVFile = open(CSVFile, 'r')
+dataFromFile = csv.reader(myCSVFile, delimiter = ';')
+
+print dataFromFile

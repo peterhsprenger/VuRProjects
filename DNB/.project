@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DNB</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.python.pydev.PyDevBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.python.pydev.pythonNature</nature>
+	</natures>
+	<variableList>
+		<variable>
+			<name>INPUT_DOCS</name>
+			<value>file:/C:/Users/PeterH/eclipsemars/DNB/documents/X01inputdocs</value>
+		</variable>
+		<variable>
+			<name>INTERMEDIARY_DOCS</name>
+			<value>file:/C:/Users/PeterH/eclipsemars/DNB/documents/X02intermediary</value>
+		</variable>
+		<variable>
+			<name>RESULT_DOCS</name>
+			<value>file:/C:/Users/PeterH/eclipsemars/DNB/documents/X03finalresults</value>
+		</variable>
+		<variable>
+			<name>TEST_DOCS</name>
+			<value>file:/C:/Users/PeterH/eclipsemars/DNB/documents/X00testdocs</value>
+		</variable>
+	</variableList>
+</projectDescription>

@@ -1,0 +1,7 @@
+import glob        # die Library GLOB listet alle Dateien in einem Folder auf
+from glob import glob
+#import pdfminer
+
+print glob.__file__
+# for f in glob.glob('C:/Users/PeterH/eclipsemars/DNB/documents/X01inputdocs/*'):
+#     print f
