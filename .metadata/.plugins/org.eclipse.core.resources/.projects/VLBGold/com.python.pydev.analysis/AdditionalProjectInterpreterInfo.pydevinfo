@@ -1,0 +1,21 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\PeterH\eclipsemars\.metadata\.plugins\org.eclipse.core.resources\.projects\VLBGold\com.python.pydev.analysis\v2_indexcache
+fehlendeVLBSchlagworte|1444845068475449000|C:\Users\PeterH\eclipsemars\VLBGold\01development\fehlendeVLBSchlagworte.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=fehlendeVLBSchlagworte
+-- END DICTIONARY
+-- START TREE 1
+6
+cre|1|create_dictionary!10@
+inp|1|inputfile!11@
+isb|1|isbn_kw_dict!11@
+out|1|outputfile!11@
+pri|1|print_and_save_dictionary_items!10@
+sou|1|sourcefile!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,8 +1,0 @@
-import glob         # listet alle Dateien in einem Folder auf
-import pdfminer
-
-
-for files in glob.glob('C:/Users/PeterH/eclipsemars/DNB/documents/X01inputdocs/*.txt'):
-    print files
-    
-

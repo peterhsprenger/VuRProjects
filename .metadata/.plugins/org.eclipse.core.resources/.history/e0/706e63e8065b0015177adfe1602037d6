@@ -1,4 +1,0 @@
-import CSVFiles
-
-myCSVFile = 'F:/Sync Projekte/01 prozesse & projekte/97 kleine projekte & support/2015-08 - VLB Gold-Status/vlb-unipress.csv'
-dataFromFile = CSVFiles.reader(myCSVFile)
