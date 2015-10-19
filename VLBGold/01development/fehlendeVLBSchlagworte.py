@@ -3,9 +3,9 @@
 
 isbn_kw_dict = {}
 
-inputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//ddcabgleich647.txt"
-sourcefile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//dictDNB_9783647complete.txt"
-outputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X03finalresults//ddcabgleich647.txt"
+inputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//VLBReport_VuR_ohneSchlagworte_LIST_89971.txt"
+sourcefile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//dictDNB_978389971complete.txt"
+outputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X03finalresults//schlagworte89971.txt"
 
 
 def create_dictionary(inp, out):
@@ -16,7 +16,7 @@ def create_dictionary(inp, out):
     
     for isbn in finpeval:
         try:
-            isbn_kw_dict[isbn] = fsrceval[isbn][4]
+            isbn_kw_dict[isbn] = fsrceval[isbn][8]
             #print isbn, fsrceval[isbn][8]
         except:
             isbn_kw_dict[isbn] = ["ISBN nicht bei DNB vorhanden"]

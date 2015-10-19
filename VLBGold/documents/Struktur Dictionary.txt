@@ -1,0 +1,47 @@
+{ISBN:
+[0: DNB-ID]
+[1: DNB-URL]
+[2: OColc-ID]
+[3: DNB GND-Codes]
+[4: DDC-Klassifikation]
+[5: URL zum Inhaltsverzeichnis]
+[6: Personen-ID (=Autoren, Herausgeber)]
+[7: DNB Sachgruppen (nach DDC-Codes)]
+[8: Klartext der DNB-DND-Codes (=Schlagwörter)]
+}
+
+was noch fehlt:
+- Parallele Ausgaben
+- gehört zu (Reihenangaben)
+- ISBN-10
+- THEMA-Code und THEMA-Code-Reihenfolge
+- THEMA-Qualifier
+- Link zur Coverdatei
+
+
+Optimale Dictionary-Struktur: 
+{ISBN:
+[0: ISBN10]
+[1: Buch-Nr]
+[2: NAV-Ausgabenr]
+[3: THEMA-Klassifikation (dicitionary mit Reihenfolge)]
+[4: THEMA Qualifier geo]
+[5: THEMA Qualifier lang]
+[6: THEMA Qualifier zielg]
+[7: THEMA Qualifier zeit]
+[8: DNB-ID]
+[9: DNB-URL]
+[10: OColc-ID]
+[11: DNB SND/GND-Codes]
+[12: Klartext der DNB-DND-Codes (=Schlagwörter)]
+[13: DNB Sachgruppen (nach DDC-Codes)]
+[14: DDC-Klassifikation]
+[15: LCSH-Klassifikation]
+[16: RDA]
+[17: URL zum Inhaltsverzeichnis]
+[18: Link zur Coverdatei]
+[19: Personen-ID (=Autoren, Herausgeber)]
+[20: related products und relation]
+
+
+
