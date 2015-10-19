@@ -3,46 +3,51 @@
 
 isbn_kw_dict = {}
 
-inputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//VLBReport_VuR_ohneSchlagworte_LIST_89971.txt"
-sourcefile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//dictDNB_978389971complete.txt"
-outputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X03finalresults//schlagworte89971.txt"
+inputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//VLBReport_VuR_ohneSchlagworte_LIST.txt"
+sourcefile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//DNBComplete_DICT.txt"
+outputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X03finalresults//NAVImport_ISBN_Schlagworte.txt"
 
 
-def create_dictionary(inp, out):
+def create_dictionary(inp, src):
     finp = open(inp)        
     finpeval = eval(finp.read())
-    fsrc = open(out)        
+    fsrc = open(src)        
     fsrceval = eval(fsrc.read())
     
     for isbn in finpeval:
         try:
-            isbn_kw_dict[isbn] = fsrceval[isbn][8]
-            #print isbn, fsrceval[isbn][8]
-        except:
-            isbn_kw_dict[isbn] = ["ISBN nicht bei DNB vorhanden"]
-            #print isbn, "nicht vorhanden"
-
-    print isbn_kw_dict
-    print "*" * 50
+            iter = len(fsrceval[isbn][3])
+            i = 0
+            id_kw_list = []
+            while i <= iter:
+                (gnd, kw, count) = (fsrceval[isbn][3][i], fsrceval[isbn][8][i], i)
+                id_kw_list.append((gnd, kw, (count+1)*10000))
+                #(id_kw_list.append(fsrceval[isbn][3][i]), id_kw_list.append(fsrceval[isbn][8][i]))
+                i = i + 1
+        except: pass 
+        isbn_kw_dict[isbn] = id_kw_list
+    #print isbn_kw_dict['9783647367132'][1][1]
 
     
 def print_and_save_dictionary_items(dictionary):
     results = open(outputfile, 'w')
     count = 0
-    for k, v in dictionary.items(): 
-        try:
-            count += 1
-            print '-'*70
-            print 'EINTRAG NR. ' + str(count)
-            print 'ISBN: ', k
-            print 'DDC: ', v
-            print 
-            
-            # mit dieser Methode werden die Daten in die Datei ausgegeben
-            datatowrite = k + ';' + str(v) + '\n'
+    for isbn, gnd_kw_list in dictionary.items(): 
+        for gnd_kw in gnd_kw_list:
+            try:
+                count += 1
+                print '-'*70
+                print 'EINTRAG NR. ' + str(count)
+                print 'ISBN: ', isbn
+                print 'gnd: ', gnd_kw[0], '| kw: ', gnd_kw[1], '| ZÄHLER: ', gnd_kw[2] 
+                print
+                # mit dieser Methode werden die Daten in die Datei ausgegeben
+                #datatowrite = isbn + '\t' + 'VLB' + '\t' + 'VLB-Schlagworte' + '\t' + gnd_kw[0] + '\t' + gnd_kw[1] + '\t' + gnd_kw[2] + '\n'
+                #results.write(datatowrite)
+            except:
+                pass    
+            datatowrite = isbn + '\t' + 'VLB' + '\t' + 'VLB-Schlagworte' + '\t' + gnd_kw[0] + '\t' + gnd_kw[1] + '\t' + str(gnd_kw[2]) + '\n'
             results.write(datatowrite)
-        except:
-            pass    
 
 create_dictionary(inputfile, sourcefile)
 print_and_save_dictionary_items(isbn_kw_dict)

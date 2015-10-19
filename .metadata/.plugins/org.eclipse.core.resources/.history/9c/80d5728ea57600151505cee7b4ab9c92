@@ -1,0 +1,50 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 19.10.2015 by @author: PeterH 
+
+
+isbn_kw_dict = {}
+
+inputfile = "G://VLBGoldFiles//results//dictDNB_978389971complete.txt"
+outputfile = "G://VLBGoldFiles//results//SND-KW-Mapping89971.txt"
+
+id_kw_dict = {}
+
+def create_dictionary(inp):
+    finp = open(inp)        
+    finpeval = eval(finp.read())
+    
+    for isbn in finpeval:
+        iter = len(finpeval[isbn][3])
+        i = 0
+        while i <= iter: 
+            try :
+                print finpeval[isbn][3][i]     
+                print finpeval[isbn][8][i]
+                if finpeval[isbn][3][i] not in id_kw_dict:
+                    id_kw_dict[finpeval[isbn][3][i]] = finpeval[isbn][8][i]
+            except: pass 
+            i = i + 1
+    print id_kw_dict        
+
+    
+def print_and_save_dictionary_items(outputfile):
+    results = open(outputfile, 'w')
+    count = 0
+    for k, v in id_kw_dict.items(): 
+        try:
+            count += 1
+            print '-'*70
+            print 'EINTRAG NR. ' + str(count)
+            print 'ID: ', k
+            print 'KW: ', v
+            print 
+            
+            # mit dieser Methode werden die Daten in die Datei ausgegeben
+            datatowrite = k + '\t' + str(v) + '\n'
+            results.write(datatowrite)
+        except:
+            pass    
+
+create_dictionary(inputfile)
+print_and_save_dictionary_items(outputfile)
+

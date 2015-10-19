@@ -1,9 +1,0 @@
-# -*- coding: iso-8859-1, utf-8 -*-
-# Created on 14.10.2015 by @author: PeterH 
-
-isbn_kw_dict = {}
-
-inputfile = "C://Users//PeterH//eclipsemars//VLBGold//documents//X01inputdocs//VLBReport_VuR_ohneSchlagworte_LIST.txt"
-finp = open(inputfile)        
-feval = eval(finp.read())
-print type(feval)
