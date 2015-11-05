@@ -1,0 +1,23 @@
+# - * - coding: iso-8859-1, utf-8 - * -
+# Created on 01.11.2015 by @author: PeterH
+
+import bs4import urllib2
+from bs4 import BeautifulSoup
+import lxml
+
+html = urllib2.urlopen('http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/known_by_Montgomery.html').read()  #http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/known_by_Fikret.html
+soup = bs4.BeautifulSoup(html)
+tags = soup('a')[2]
+print tags
+count = 4
+position = 3
+for tag in tags:
+    linking = tag.get('href', None)
+    print linking
+
+
+
+# 
+# for tag in tags:
+#     assignmentsum = assignmentsum + int(tag.contents[0])
+# print assignmentsum

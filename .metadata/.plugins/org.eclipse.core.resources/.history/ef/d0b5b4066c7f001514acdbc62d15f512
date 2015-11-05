@@ -1,0 +1,14 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 31.10.2015 by @author: PeterH 
+import re
+
+inputfile = 'C:\\Users\\PeterH\\eclipsemars\\TrainingResources\\documents\\X00testdocs\\regex_sum_42.txt'
+
+regexfile = open(inputfile).read()
+print regexfile
+numberlist = re.findall('[0-9]+', line)
+ 
+print numberlist
+
+
+

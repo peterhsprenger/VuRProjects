@@ -1,12 +1,18 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\PeterH\eclipsemars\.metadata\.plugins\org.eclipse.core.resources\.projects\DNB\com.python.pydev.analysis\v2_indexcache
+01development.SearchingForDeweyInDNB|1446686329465280000|C:\Users\PeterH\eclipsemars\DNB\01development\SearchingForDeweyInDNB.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+1
+1=01development.SearchingForDeweyInDNB
 -- END DICTIONARY
 -- START TREE 1
-0
+4
+bas|1|base_file!11@
+ddc|1|ddc!11@
+fh|0|
+fin|2|finpeval!11@finp!11@
 -- END TREE
 -- START TREE 2
 0

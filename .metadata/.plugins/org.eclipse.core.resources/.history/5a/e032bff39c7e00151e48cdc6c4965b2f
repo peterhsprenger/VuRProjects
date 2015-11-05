@@ -1,0 +1,21 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 30.10.2015 by @author: PeterH 
+
+import pdfminer
+
+mining = open('F:\eb_9783737004541_052812.pdf', 'r')
+
+kwindex = dict()
+
+for word in mining: 
+    if word not in kwindex:
+        counter = 0
+        kwindex[word] = counter + 1
+    else:
+        kwindex[word] = counter + 1
+
+print kwindex
+
+
+
+

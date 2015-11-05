@@ -1,0 +1,24 @@
+# - * - coding: iso-8859-1, utf-8 - * -
+# Created on 01.11.2015 by @author: PeterH
+
+import bs4import urllib2
+from bs4 import BeautifulSoup
+import lxml
+
+persons = []
+i = 0
+for i in i <= 4:
+    follow = 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/known_by_Fikret.html'
+    html = urllib2.urlopen(follow).read()
+    soup = bs4.BeautifulSoup(html)
+    tag = soup('a')[2]
+    follow = tag.get('href', None)
+    persons.append(tag.contents[0])
+
+
+
+
+# 
+# for tag in tags:
+#     assignmentsum = assignmentsum + int(tag.contents[0])
+# print assignmentsum

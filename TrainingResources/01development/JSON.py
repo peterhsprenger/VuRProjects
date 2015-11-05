@@ -1,0 +1,14 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 01.11.2015 by @author: PeterH 
+
+import json
+import urllib2
+
+uh = urllib2.urlopen("http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_189088.json")
+
+numbersum = json.load(uh)
+total = 0
+for item in numbersum['comments']:
+    total = total + item['count']
+    
+print total

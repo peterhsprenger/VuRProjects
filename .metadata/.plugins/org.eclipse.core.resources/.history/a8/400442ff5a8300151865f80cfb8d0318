@@ -1,0 +1,14 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 05.11.2015 by @author: PeterH 
+
+base_file = 'C:\Users\PeterH\eclipsemars\DNB\documents\X03finalresults\dictDNB_9783525complete.txt'
+finp = open(base_file)
+finpeval = eval(finp.read())
+
+for isbn in finpeval:
+    ddc = finpeval[isbn][4]
+    if ddc == '252.04':
+        print isbn
+    else:
+        pass
+

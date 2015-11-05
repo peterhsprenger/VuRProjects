@@ -1,0 +1,15 @@
+# - * - coding: iso-8859-1, utf-8 - * -
+# Created on 01.11.2015 by @author: PeterH
+
+import bs4import urllib2
+from bs4 import BeautifulSoup
+import lxml
+
+html = urllib2.urlopen('http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_189087.html').read()
+soup = bs4.BeautifulSoup(html)
+tags = soup('span')
+
+assignmentsum = 0
+for tag in tags:
+    assignmentsum = assignmentsum + int(tag.contents[0])
+print assignmentsum

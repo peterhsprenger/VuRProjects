@@ -1,12 +1,23 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\PeterH\eclipsemars\.metadata\.plugins\org.eclipse.core.resources\.projects\TrainingResources\com.python.pydev.analysis\v2_indexcache
+01development.JSONGoogleMapsAPI|1446677281351468000|C:\Users\PeterH\eclipsemars\TrainingResources\01development\JSONGoogleMapsAPI.py
+01development.JSON|1446676076510569000|C:\Users\PeterH\eclipsemars\TrainingResources\01development\JSON.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+2
+1=01development.JSONGoogleMapsAPI
+2=01development.JSON
 -- END DICTIONARY
 -- START TREE 1
-0
+7
+add|1|address!11@
+bas|1|base_url!11@
+fil|0|
+num|1|numbersum!19@
+sea|1|search_url!11@
+tot|1|total!19@
+uh|1|uh!19@
 -- END TREE
 -- START TREE 2
 0

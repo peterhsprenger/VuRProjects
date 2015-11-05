@@ -1,0 +1,26 @@
+# - * - coding: iso-8859-1, utf-8 - * -
+# Created on 01.11.2015 by @author: PeterH
+
+import bs4import urllib2
+from bs4 import BeautifulSoup
+import lxml
+
+follow = 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/known_by_Fikret.html'
+position = 2
+count = 0
+html = urllib2.urlopen(follow).read()
+soup = bs4.BeautifulSoup(html)
+tag = soup('a')[position]
+#print tags
+for c in count:
+    if c <= 4:
+        linking = tag.get('href', None)
+        print linking
+        count += 1
+
+
+
+# 
+# for tag in tags:
+#     assignmentsum = assignmentsum + int(tag.contents[0])
+# print assignmentsum

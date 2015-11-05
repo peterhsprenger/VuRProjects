@@ -1,0 +1,9 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 05.11.2015 by @author: PeterH 
+
+base_file = 'dictDNB_9783525complete.txt'
+
+for isbn in base_file:
+    if isbn[4] = '252.04'
+    print isbn
+

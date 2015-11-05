@@ -1,0 +1,24 @@
+# -*- coding: iso-8859-1, utf-8 -*-
+# Created on 01.11.2015 by @author: PeterH 
+
+import urllib
+import xml.etree.ElementTree as ET
+
+serviceurl = 'http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_42.xml'
+uh = urllib.urlopen(serviceurl).read()
+print uh
+#     print 'Retrieved',len(data),'characters'
+#     print data
+tree = ET.fromstring(uh)
+comments = tree.findall('comment')
+print comments
+#numbercount = counts[0].find('.//count').text
+
+
+#     lat = results[0].find('geometry').find('location').find('lat').text
+#     lng = results[0].find('geometry').find('location').find('lng').text
+#     location = results[0].find('formatted_address').text
+# 
+#     print 'lat',lat,'lng',lng
+#     print location
+
